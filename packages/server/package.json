@@ -1,0 +1,34 @@
+{
+  "name": "@addressflow/server",
+  "version": "0.1.0",
+  "description": "Persistence, Redis coordination, and orchestrator service for AddressFlow",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@addressflow/types": "workspace:*",
+    "@addressflow/core": "workspace:*",
+    "@addressflow/provider-base": "workspace:*",
+    "ioredis": "^5.6.0",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.11",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}

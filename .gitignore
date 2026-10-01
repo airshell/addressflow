@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.turbo/
+coverage/
+*.log
+.env
+.env.local
+.DS_Store
+**/.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+*.tsbuildinfo
+tmp/
+scratch/
+
